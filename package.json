@@ -6,19 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
-  },
-  "prettier": {
-    "printWidth": 100,
-    "singleQuote": true,
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
+    "test": "ng test",
+    "lint": "biome check",
+    "format": "biome format",
+    "lint:fix": "biome check --write",
+    "format:fix": "biome format --write"
   },
   "private": true,
   "packageManager": "npm@11.7.0",
