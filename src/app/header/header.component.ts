@@ -8,4 +8,11 @@ import { Link } from './link/link.component'
   ],
   templateUrl: './header.component.html',
 })
-export class Header {}
+export class Header {
+  toggleDropdown() {
+    let dropdown = document.getElementById('dropdown')
+
+    dropdown?.classList.toggle('hidden')
+    dropdown?.classList.toggle('flex')
+  }
+}

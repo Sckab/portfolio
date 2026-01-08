@@ -15,12 +15,22 @@
     <pf-link link="/">STACK</pf-link>
     <pf-link link="/">PROJECTS</pf-link>
   </div>
-  <div class="flex md:hidden">
+  <div class="relative flex md:hidden">
     <button
       type="button"
-      class="flex items-center justify-center text-3xl text-stone-700 focus:text-frosted-blue-300"
+      class="flex items-center justify-center text-3xl text-stone-700 transition active:text-frosted-blue-300"
+      (click)="toggleDropdown()"
     >
       <span class="icon-[solar--hamburger-menu-linear]"></span>
     </button>
+    <div
+      class="absolute top-15 right-0 hidden flex-col rounded-b-lg bg-neutral-900 p-2 px-4"
+      id="dropdown"
+    >
+      <pf-link link="/">STACK</pf-link>
+      <pf-link link="/">PROJECTS</pf-link>
+      <hr class="m-0 my-1 h-2 text-frosted-blue-300" />
+      <pf-link link="https://github.com/Sckab">Github</pf-link>
+    </div>
   </div>
 </header>
