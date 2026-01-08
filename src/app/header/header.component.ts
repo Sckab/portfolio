@@ -1,10 +1,12 @@
 import { Component } from '@angular/core'
-import { Link } from './link/link.component'
+import { Link } from './link/link.directive'
+import { RouterLink } from '@angular/router'
 
 @Component({
   selector: 'pf-header',
   imports: [
     Link,
+    RouterLink,
   ],
   templateUrl: './header.component.html',
 })
