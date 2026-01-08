@@ -5,14 +5,22 @@
     <img
       src="favicon.svg"
       alt="Sckab Icon"
-      class="h-15 rounded-full select-none"
+      class="h-13 rounded-full select-none md:h-15"
     />
-    <span class="text-5xl text-frosted-blue-300 select-none">
+    <span class="text-3xl text-frosted-blue-300 select-none md:text-5xl">
       SCKAB PORTFOLIO
     </span>
   </div>
-  <div class="flex flex-row gap-4">
+  <div class="hidden flex-row gap-4 md:flex">
     <pf-link link="/">STACK</pf-link>
     <pf-link link="/">PROJECTS</pf-link>
+  </div>
+  <div class="flex md:hidden">
+    <button
+      type="button"
+      class="flex items-center justify-center text-3xl text-stone-700 focus:text-frosted-blue-300"
+    >
+      <span class="icon-[solar--hamburger-menu-linear]"></span>
+    </button>
   </div>
 </header>

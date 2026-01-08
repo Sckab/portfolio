@@ -5,6 +5,8 @@
 @import "tailwindcss";
 @import "./palette.css";
 
+@plugin "@iconify/tailwind4";
+
 @theme {
   --font-ui: "Source Sans 3", sans-serif;
 }
