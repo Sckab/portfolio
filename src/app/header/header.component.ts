@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, signal } from '@angular/core'
 import { RouterLink } from '@angular/router'
 import { Link } from './link/link.directive'
 
@@ -11,10 +11,14 @@ import { Link } from './link/link.directive'
   templateUrl: './header.component.html',
 })
 export class Header {
-  toggleDropdown() {
-    let dropdown = document.getElementById('dropdown')
+  readonly mobileDropdownVisible = signal(false)
+  readonly dropdownVisible = signal(false)
 
-    dropdown?.classList.toggle('hidden')
-    dropdown?.classList.toggle('flex')
+  toggleMobileDropdown() {
+    this.mobileDropdownVisible.update((visible) => !visible)
+  }
+
+  toggleDropdown() {
+    this.dropdownVisible.update((visible) => !visible)
   }
 }

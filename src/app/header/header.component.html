@@ -11,31 +11,91 @@
       SCKAB PORTFOLIO
     </span>
   </div>
-  <div class="hidden flex-row gap-4 md:flex">
-    <a
-      pfLink
-      routerLink="/"
-    >
-      STACK
-    </a>
-    <a
-      pfLink
-      routerLink="/"
-    >
-      PROJECTS
-    </a>
+  <div class="hidden flex-row gap-7 md:flex">
+    <div class="flex gap-4">
+      <a
+        pfLink
+        routerLink="/"
+      >
+        STACK
+      </a>
+      <a
+        pfLink
+        routerLink="/"
+      >
+        PROJECTS
+      </a>
+    </div>
+    <div class="relative hidden md:flex">
+      <button
+        type="button"
+        class="flex items-center justify-center text-2xl text-neutral-700 transition hover:cursor-pointer active:text-frosted-blue-300"
+        (click)="toggleDropdown()"
+      >
+        CONTACTS
+        <span
+          class="icon-[solar--alt-arrow-right-linear] text-3xl transition"
+          [class.rotate-90]="dropdownVisible()"
+        ></span>
+      </button>
+      <div
+        class="absolute top-15 right-0 flex-col rounded-b-lg bg-neutral-900 p-2 px-4"
+        [class.hidden]="!dropdownVisible()"
+        [class.flex]="dropdownVisible()"
+      >
+        <div class="flex w-full flex-row items-center justify-between gap-5">
+          <a
+            pfLink
+            href="https://github.com/Sckab"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github
+          </a>
+
+          <span class="icon-[cib--github] text-frosted-blue-300"></span>
+        </div>
+
+        <div class="flex w-full flex-row items-center justify-between gap-5">
+          <a
+            pfLink
+            href="https://leetcode.com/u/Sckab"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LeetCode
+          </a>
+
+          <span class="icon-[cib--leetcode] text-frosted-blue-300"></span>
+        </div>
+
+        <div class="flex w-full flex-row items-center justify-between gap-5">
+          <a
+            pfLink
+            href="https://discord.gg/RVX6RRqkt5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Discord
+          </a>
+
+          <span class="icon-[cib--discord] text-frosted-blue-300"></span>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="relative flex md:hidden">
     <button
       type="button"
-      class="flex items-center justify-center text-3xl text-stone-700 transition active:text-frosted-blue-300"
-      (click)="toggleDropdown()"
+      class="flex items-center justify-center text-3xl text-neutral-700 transition active:text-frosted-blue-300"
+      (click)="toggleMobileDropdown()"
     >
       <span class="icon-[solar--hamburger-menu-linear]"></span>
     </button>
     <div
-      class="absolute top-15 right-0 hidden flex-col rounded-b-lg bg-neutral-900 p-2 px-4"
-      id="dropdown"
+      class="absolute top-15 right-0 flex-col rounded-b-lg bg-neutral-900 p-2 px-4"
+      [class.hidden]="!mobileDropdownVisible()"
+      [class.flex]="mobileDropdownVisible()"
     >
       <a
         pfLink
