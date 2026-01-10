@@ -3,18 +3,18 @@
   "root": true,
   "files": {
     "includes": [
-      "src/**/*{.ts,.tsx,.html}"
+      "src/**/*{.ts,.tsx,.html,.css}"
     ]
   },
   "linter": {
     "enabled": true,
     "includes": [
-      "src/**/*{.ts,.tsx,.html}"
+      "src/**/*{.ts,.tsx,.html,.css}"
     ]
   },
   "formatter": {
     "includes": [
-      "src/**/*{.ts,.tsx,.html}"
+      "src/**/*{.ts,.tsx,.html,.css}"
     ],
     "formatWithErrors": true,
     "indentStyle": "space",
@@ -50,7 +50,8 @@
   },
   "css": {
     "parser": {
-      "cssModules": true
+      "cssModules": true,
+      "tailwindDirectives": true
     },
     "formatter": {
       "enabled": true,

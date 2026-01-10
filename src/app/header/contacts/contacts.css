@@ -1,4 +1,4 @@
-@import "../header.css";
+@import '../header.css';
 
 .contacts--row {
   @apply flex w-full flex-row items-center justify-between gap-5;
@@ -7,4 +7,3 @@
 .contacts--row a {
   @apply font-ui font-bold text-neutral-700 transition select-none hover:text-frosted-blue-300 active:text-frosted-blue-300 md:text-xl;
 }
-
