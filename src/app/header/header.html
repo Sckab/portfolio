@@ -14,13 +14,13 @@
   <div class="hidden flex-row gap-7 md:flex">
     <div class="flex gap-4">
       <a
-        pfLink
+        class="header--link"
         routerLink="/"
       >
         STACK
       </a>
       <a
-        pfLink
+        class="header--link"
         routerLink="/"
       >
         PROJECTS
@@ -28,8 +28,8 @@
     </div>
     <div class="relative hidden md:flex">
       <button
+        class="header--button"
         type="button"
-        class="flex items-center justify-center text-2xl text-neutral-700 transition select-none hover:cursor-pointer active:text-frosted-blue-300"
         (click)="toggleDropdown()"
       >
         CONTACTS
@@ -43,54 +43,17 @@
         [class.hidden]="!dropdownVisible()"
         [class.flex]="dropdownVisible()"
       >
-        <div class="flex w-full flex-row items-center justify-between gap-5">
-          <a
-            pfLink
-            href="https://github.com/Sckab"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Github
-          </a>
-
-          <span class="icon-[cib--github] text-frosted-blue-300"></span>
-        </div>
-
-        <div class="flex w-full flex-row items-center justify-between gap-5">
-          <a
-            pfLink
-            href="https://leetcode.com/u/Sckab"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LeetCode
-          </a>
-
-          <span class="icon-[cib--leetcode] text-frosted-blue-300"></span>
-        </div>
-
-        <div class="flex w-full flex-row items-center justify-between gap-5">
-          <a
-            pfLink
-            href="https://discord.gg/RVX6RRqkt5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Discord
-          </a>
-
-          <span class="icon-[cib--discord] text-frosted-blue-300"></span>
-        </div>
+        <pf-contacts />
       </div>
     </div>
   </div>
   <div class="relative flex md:hidden">
     <button
       type="button"
-      class="flex items-center justify-center text-3xl text-neutral-700 transition active:text-frosted-blue-300"
       (click)="toggleMobileDropdown()"
+      class="header--button"
     >
-      <span class="icon-[solar--hamburger-menu-linear]"></span>
+      <span class="icon-[solar--hamburger-menu-linear] text-3xl"></span>
     </button>
     <div
       class="absolute top-15 right-0 flex-col rounded-b-lg bg-neutral-900 p-2 px-4"
@@ -98,26 +61,36 @@
       [class.flex]="mobileDropdownVisible()"
     >
       <a
-        pfLink
+        class="header--link"
         routerLink="/"
       >
         STACK
       </a>
       <a
-        pfLink
+        class="header--link"
         routerLink="/"
       >
         PROJECTS
       </a>
       <hr class="m-0 my-1 h-2 text-frosted-blue-300" />
-      <a
-        pfLink
-        href="https://github.com/Sckab"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Github
-      </a>
+      <div class="relative">
+        <button
+          class=""
+          type="button"
+          class="header--button -ml-1.5"
+          (click)="toggleMobileContactsDropdown()"
+        >
+          <span class="icon-[solar--alt-arrow-left-linear]"></span>
+          Contacts
+        </button>
+        <div
+          class="absolute top-0 right-33 flex-col rounded-lg bg-neutral-900 p-2 px-3"
+          [class.hidden]="!mobileContactsDropdownVisible()"
+          [class.flex]="mobileContactsDropdownVisible()"
+        >
+          <pf-contacts />
+        </div>
+      </div>
     </div>
   </div>
 </header>
