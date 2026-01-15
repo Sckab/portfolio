@@ -1,5 +1,3 @@
-@import '../../../styles.css';
-
 .contacts__row {
   @apply flex w-full flex-row items-center justify-between gap-5;
 }

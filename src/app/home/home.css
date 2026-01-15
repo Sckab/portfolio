@@ -1,5 +1,3 @@
-@import '../../styles.css';
-
 a {
   @apply font-bold text-frosted-blue-300 hover:underline;
 }

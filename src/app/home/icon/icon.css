@@ -1,5 +1,3 @@
-@import '../../../styles.css';
-
 #icon__container {
   @apply relative;
 }
