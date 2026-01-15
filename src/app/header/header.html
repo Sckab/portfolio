@@ -1,5 +1,5 @@
 <header
-  class="flex items-center justify-between bg-neutral-900 p-5 font-ui font-bold"
+  class="flex items-center justify-between bg-neutral-900 p-5 font-ui font-bold sticky top-0"
 >
   <div class="flex flex-row items-center justify-center gap-4">
     <img
@@ -13,14 +13,14 @@
   </div>
   <div class="hidden flex-row gap-7 md:flex">
     <a
-      class="header--link"
+      class="header__link"
       routerLink="/"
     >
       PROJECTS
     </a>
     <div class="relative hidden md:flex">
       <button
-        class="header--button"
+        class="header__button"
         type="button"
         (click)="toggleDropdown()"
       >
@@ -43,7 +43,7 @@
     <button
       type="button"
       (click)="toggleMobileDropdown()"
-      class="header--button"
+      class="header__button"
     >
       <span class="icon-[solar--hamburger-menu-linear] text-3xl"></span>
     </button>
@@ -53,13 +53,13 @@
       [class.flex]="mobileDropdownVisible()"
     >
       <a
-        class="header--link"
+        class="header__link"
         routerLink="/"
       >
         STACK
       </a>
       <a
-        class="header--link"
+        class="header__link"
         routerLink="/"
       >
         PROJECTS
@@ -68,7 +68,7 @@
       <div class="relative">
         <button
           type="button"
-          class="header--button -ml-1.5"
+          class="header__button -ml-1.5"
           (click)="toggleMobileContactsDropdown()"
         >
           <span class="icon-[solar--alt-arrow-left-linear]"></span>

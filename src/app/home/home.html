@@ -1,9 +1,156 @@
-<section class="flex flex-col items-start justify-center xl:w-2/5">
-  <h1 class="text-frosted-blue-300 font-bold text-7xl">HELLO!</h1>
-  <p class="text-neutral-100 text-2xl">
-    I'm an 11th grade student and a passionate software/front-end developer at
-    <a href="https://github.com/SCSDC-co">SCSDC</a>. I love building clean,
-    user-friendly UI/UX designs for websites and desktop apps, turning designs
-    into fast, accessible, and maintainable interfaces.
-  </p>
-</section>
+<div class="w-full flex flex-col gap-4">
+  <div class="flex flex-col lg:flex-row w-full justify-between gap-2 lg:gap-0">
+    <section>
+      <h1 class="title">HELLO!</h1>
+      <p class="text-neutral-100 text-2xl">
+        I'm an 11th grade student and a passionate software/front-end developer
+        and founder of
+        <a href="https://github.com/SCSDC-co">SCSDC</a>. I love building clean,
+        user-friendly UI/UX designs for websites and desktop apps, turning
+        designs into fast, accessible, and maintainable interfaces.
+      </p>
+    </section>
+
+    <section>
+      <span class="title">STACK</span>
+
+      <div class="flex flex-col gap-2 w-full">
+        <div class="stack__card__row">
+          <span class="stack__card__title">FRONT-END</span>
+
+          <div class="stack__card__icon__container">
+            <pf-stack-icon
+              iconName="html"
+              tooltip="HTML"
+            />
+
+            <pf-stack-icon
+              iconName="css"
+              tooltip="CSS"
+            />
+
+            <pf-stack-icon
+              iconName="tailwindcss-dark"
+              tooltip="TailwindCSS"
+            />
+
+            <pf-stack-icon
+              iconName="javascript"
+              tooltip="JavaScript"
+            />
+
+            <pf-stack-icon
+              iconName="typescript"
+              tooltip="TypeScript"
+            />
+
+            <pf-stack-icon
+              iconName="astro"
+              tooltip="Astro"
+            />
+          </div>
+        </div>
+
+        <div class="stack__card__row">
+          <span class="stack__card__title">SOFTWARE / SYSTEMS</span>
+
+          <div class="stack__card__icon__container">
+            <pf-stack-icon
+              iconName="cpp"
+              tooltip="C++"
+            />
+
+            <pf-stack-icon
+              iconName="cs"
+              tooltip="C#"
+            />
+
+            <pf-stack-icon
+              iconName="python-dark"
+              tooltip="Python"
+            />
+          </div>
+        </div>
+
+        <div class="stack__card__row">
+          <span class="stack__card__title">TOOLS / DEVOPS BASICS</span>
+
+          <div class="stack__card__icon__container">
+            <pf-stack-icon
+              iconName="git"
+              tooltip="Git"
+            />
+
+            <pf-stack-icon
+              iconName="markdown-dark"
+              tooltip="Markdown"
+            />
+
+            <pf-stack-icon
+              iconName="bash-dark"
+              tooltip="Bash Scripting"
+            />
+
+            <pf-stack-icon
+              iconName="github-dark"
+              tooltip="GitHub"
+            />
+
+            <pf-stack-icon
+              iconName="githubactions-dark"
+              tooltip="GitHub Actions"
+            />
+          </div>
+        </div>
+
+        <div class="stack__card__row">
+          <span class="stack__card__title">WHAT I'M LEARNING</span>
+
+          <div class="stack__card__icon__container">
+            <pf-stack-icon
+              iconName="golang"
+              tooltip="Go"
+            />
+
+            <pf-stack-icon
+              iconName="react-dark"
+              tooltip="React"
+            />
+
+            <pf-stack-icon
+              iconName="nextjs-light"
+              tooltip="Next.JS"
+            />
+
+            <pf-stack-icon
+              iconName="angular-dark"
+              tooltip="Angular"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div
+    class="flex flex-col justify-center items-center mb-3 gap-4 sm:mb-0 sm:flex-row "
+  >
+    <a
+      href="https://github.com/Sckab?tab=repositories"
+      class="cta__link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="icon-[cib--github]"></span>
+      Check My Projects
+    </a>
+    <button
+      type="button"
+      class="cta__link"
+      (click)="handleEmailClick()"
+    >
+      <span class="icon-[fa6-solid--envelope]"></span>
+      {{ emailLabel() }}
+    </button>
+  </div>
+</div>
