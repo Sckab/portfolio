@@ -26,7 +26,7 @@ section {
 
 .cta__link {
   @apply font-semibold text-frosted-blue-300;
-  @apply rounded-md border p-1;
+  @apply rounded-md border p-1 px-2;
   @apply flex items-center justify-center gap-1;
   @apply border-frosted-blue-300 bg-neutral-900;
   @apply transition hover:cursor-pointer hover:bg-frosted-blue-300 hover:text-neutral-900 hover:no-underline;
