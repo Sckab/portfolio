@@ -10,7 +10,8 @@
     "lint": "biome check",
     "format": "biome format",
     "lint:fix": "biome check --write",
-    "format:fix": "biome format --write"
+    "format:fix": "biome format --write",
+    "serve:ssr:portfolio": "node dist/portfolio/server/server.mjs"
   },
   "private": true,
   "packageManager": "npm@11.7.0",
@@ -20,7 +21,10 @@
     "@angular/core": "^21.1.0",
     "@angular/forms": "^21.1.0",
     "@angular/platform-browser": "^21.1.0",
+    "@angular/platform-server": "^21.1.0",
     "@angular/router": "^21.1.0",
+    "@angular/ssr": "^21.1.0",
+    "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
@@ -35,6 +39,8 @@
     "@iconify-json/solar": "^1.2.5",
     "@iconify/tailwind4": "^1.2.0",
     "@tailwindcss/postcss": "^4.1.12",
+    "@types/express": "^5.0.1",
+    "@types/node": "^20.17.19",
     "jsdom": "^27.1.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.12",

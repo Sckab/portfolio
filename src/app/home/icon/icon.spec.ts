@@ -1,23 +1,24 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { Icon } from './icon';
+import { Icon } from './icon'
 
 describe('Icon', () => {
-  let component: Icon;
-  let fixture: ComponentFixture<Icon>;
+  let component: Icon
+  let fixture: ComponentFixture<Icon>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Icon]
-    })
-    .compileComponents();
+      imports: [
+        Icon,
+      ],
+    }).compileComponents()
 
-    fixture = TestBed.createComponent(Icon);
-    component = fixture.componentInstance;
-    await fixture.whenStable();
-  });
+    fixture = TestBed.createComponent(Icon)
+    component = fixture.componentInstance
+    await fixture.whenStable()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})
