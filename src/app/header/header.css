@@ -1,3 +1,5 @@
+@import '../../styles.css';
+
 .header__link {
   @apply font-ui text-2xl font-bold text-neutral-700 transition select-none hover:text-frosted-blue-300 active:text-frosted-blue-300;
 }

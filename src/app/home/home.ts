@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core'
 import { Icon } from './icon/icon'
 
 @Component({
-  selector: 'app-home',
+  selector: 'pf-home',
   imports: [
     Icon,
   ],
