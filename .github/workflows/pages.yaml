@@ -31,7 +31,7 @@ jobs:
           node-version: 24
           cache: 'npm'
       - run: 'npm install'
-      - run: 'npm run build -- --base-href="/portfolio/"'
+      - run: 'npm run build -- --base-href="sckab.is-a.dev"'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
