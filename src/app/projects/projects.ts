@@ -1,8 +1,11 @@
 import { Component } from '@angular/core'
+import { Card } from './card/card'
 
 @Component({
   selector: 'pf-projects',
-  imports: [],
+  imports: [
+    Card,
+  ],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
 })

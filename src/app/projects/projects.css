@@ -1,0 +1,17 @@
+@import '../../styles.css';
+
+section {
+  @apply flex flex-col items-center justify-center xl:w-3/4;
+}
+
+.title {
+  @apply text-7xl font-bold text-frosted-blue-300;
+}
+
+.projects {
+  @apply flex w-3/4 flex-row items-stretch justify-center gap-2;
+}
+
+pf-projects-card {
+  @apply w-1/3;
+}

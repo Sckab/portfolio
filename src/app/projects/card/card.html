@@ -1,0 +1,23 @@
+<div
+  class="flex flex-col rounded-lg border border-neutral-900 bg-neutral-900 p-3 justify-between h-full"
+>
+  <div>
+    <span class="title">{{ title }}</span>
+    <span class="text-neutral-100">{{ description }}</span>
+  </div>
+  <div class="h-fit">
+    <hr class="text-frosted-blue-300 my-2" />
+    <div>
+      <ng-content></ng-content>
+    </div>
+    <hr class="text-frosted-blue-300 my-2" />
+    <a
+      [href]="link"
+      class="link w-full"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      REPO
+    </a>
+  </div>
+</div>
