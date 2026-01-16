@@ -7,6 +7,5 @@ import { Component, Input } from '@angular/core'
   styleUrl: './icon.css',
 })
 export class Icon {
-  @Input() iconName!: string
   @Input() tooltip!: string
 }
