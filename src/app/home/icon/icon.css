@@ -7,9 +7,9 @@
 #icon__tooltip {
   @apply absolute bottom-full left-1/2 hidden -translate-x-1/2;
   @apply mb-1 p-1;
-  @apply font-semibold text-nowrap;
+  @apply font-semibold text-nowrap select-none;
   @apply rounded-md border border-frosted-blue-300;
-  @apply bg-neutral-900 text-neutral-100;
+  @apply bg-neutral-900 text-frosted-blue-300;
 }
 
 #icon__container:hover #icon__tooltip {
