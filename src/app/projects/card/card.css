@@ -1,7 +1,8 @@
 @import '../../../styles.css';
 
 .link {
-  @apply flex items-center justify-center font-ui text-2xl font-bold text-neutral-700 transition select-none hover:text-frosted-blue-300 active:text-frosted-blue-300;
+  @apply flex items-center justify-center font-ui text-2xl font-bold text-neutral-700 transition outline-none select-none;
+  @apply hover:text-frosted-blue-300 focus:text-frosted-blue-300 active:text-frosted-blue-300;
 }
 
 .title {
