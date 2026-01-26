@@ -5,5 +5,6 @@
 }
 
 .contacts__row a {
-  @apply font-ui font-bold text-neutral-700 transition select-none hover:text-frosted-blue-300 active:text-frosted-blue-300 md:text-xl;
+  @apply font-ui font-bold text-neutral-700 transition outline-none select-none md:text-xl;
+  @apply hover:text-frosted-blue-300 focus:text-frosted-blue-300 active:text-frosted-blue-300;
 }
