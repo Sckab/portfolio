@@ -26,32 +26,41 @@ const link = computed(() => (useRoute().path === "/" ? "" : "/"));
               link.length !== 0,
           }"
         >
-          <h1>SCKAB</h1>
+          <h2 class="uppercase">sckab</h2>
         </NuxtLink>
       </div>
 
       <nav class="flex flex-row gap-3">
         <ul class="flex flex-row items-center justify-center gap-3">
           <li>
-            <NavLink link="/projects">PROJECTS</NavLink>
+            <NavLink link="/projects">projects</NavLink>
           </li>
           <li>
             <div class="h-11 bg-tertiary w-0.5"></div>
           </li>
           <li>
-            <NavLink link="/blog">BLOG</NavLink>
+            <NavLink link="/blog">blog</NavLink>
           </li>
         </ul>
 
         <div
           class="bg-tertiary rounded-3xl h-full w-fit flex flex-row justify-center items-center p-3.5 gap-3"
         >
-          <NavIcon icon="ri:twitter-x-fill" link="https://x.com/Sckab_345" />
+          <NavIcon
+            icon="ri:twitter-x-fill"
+            link="https://x.com/Sckab_345"
+            aria_label="X profile"
+          />
           <NavIcon
             icon="tabler:brand-leetcode"
             link="https://leetcode.com/u/Sckab"
+            aria_label="LeetCode profile"
           />
-          <NavIcon icon="mdi:github" link="https://github.com/Sckab" />
+          <NavIcon
+            icon="mdi:github"
+            link="https://github.com/Sckab"
+            aria_label="GitHub profile"
+          />
         </div>
       </nav>
     </header>

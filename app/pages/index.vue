@@ -16,7 +16,7 @@ useHead({
 <template>
   <div class="w-full h-full columns-2 gap-10 px-40">
     <div class="flex flex-col justify-center h-full">
-      <h2 class="text-primary text-6xl font-bold">Hello!</h2>
+      <h1 class="text-primary text-6xl font-bold">Hello!</h1>
 
       <p class="text-foreground text-2xl">
         I'm a 12th grade student and a passionate software/front-end developer
