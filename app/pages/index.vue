@@ -22,9 +22,8 @@ useHead({
         I'm a 12th grade student and a passionate software/front-end developer
         and co-founder of
         <Link link="https://github.com/SCSDC-co" text="SCSDC" external />. I
-        love building clean, user-friendly UI/UX designs for websites and
-        desktop apps, turning designs into fast, accessible, and maintainable
-        interfaces.
+        love designing minimal, but useful interfaces with the best UX possible.
+        I usually make TUI/CLI apps, but I also like building GUI applications.
       </p>
     </div>
 
