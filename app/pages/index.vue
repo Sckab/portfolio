@@ -19,7 +19,7 @@ useHead({
       <h2 class="text-primary text-6xl font-bold">Hello!</h2>
 
       <p class="text-foreground text-2xl">
-        I'm an 12th grade student and a passionate software/front-end developer
+        I'm a 12th grade student and a passionate software/front-end developer
         and co-founder of
         <Link link="https://github.com/SCSDC-co" text="SCSDC" external />. I
         love building clean, user-friendly UI/UX designs for websites and
