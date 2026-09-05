@@ -7,6 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/icon',
     'nuxt-og-image',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
   ],
   devtools: {
     enabled: true,
@@ -26,7 +28,6 @@ export default defineNuxtConfig({
         800,
       ],
     },
-
     families: [
       {
         name: 'Inter',
@@ -43,7 +44,6 @@ export default defineNuxtConfig({
   },
   site: {
     url: 'https://sckab.is-a.dev',
-
     name: "Sckab's Portfolio",
   },
 })

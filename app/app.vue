@@ -6,7 +6,7 @@ const link = computed(() => (useRoute().path === "/" ? "" : "/"));
 </script>
 
 <template>
-  <div class="h-dvh w-full bg-secondary font-default">
+  <div class="h-dvh w-full bg-secondary font-default flex flex-col">
     <header
       class="h-24 border-b border-tertiary w-full flex flex-row p-3.5 justify-between"
     >
@@ -56,7 +56,7 @@ const link = computed(() => (useRoute().path === "/" ? "" : "/"));
       </nav>
     </header>
 
-    <main>
+    <main class="w-full flex-1">
       <NuxtRouteAnnouncer />
       <NuxtPage />
     </main>
