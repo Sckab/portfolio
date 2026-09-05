@@ -23,7 +23,7 @@ useHead({
         and co-founder of
         <Link link="https://github.com/SCSDC-co" text="SCSDC" external />. I
         love designing minimal, but useful interfaces with the best UX possible.
-        I usually make TUI/CLI apps, but I also like building GUI applications.
+        I usually make TUI/CLI applications, but I also like building GUI ones.
       </p>
     </div>
 
