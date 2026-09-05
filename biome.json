@@ -40,7 +40,7 @@
       "indentWidth": 2,
       "indentStyle": "space",
       "lineEnding": "lf",
-      "lineWidth": 80,
+      "lineWidth": 100,
       "expand": "always",
       "operatorLinebreak": "before"
     },
@@ -58,7 +58,7 @@
       "indentStyle": "space",
       "indentWidth": 2,
       "lineEnding": "lf",
-      "lineWidth": 80,
+      "lineWidth": 100,
       "quoteStyle": "single"
     },
     "linter": {
@@ -75,14 +75,14 @@
       "indentStyle": "space",
       "indentWidth": 2,
       "lineEnding": "lf",
-      "lineWidth": 80,
+      "lineWidth": 100,
       "attributePosition": "multiline",
       "bracketSameLine": false,
       "selfCloseVoidElements": "always",
       "whitespaceSensitivity": "ignore"
     },
     "parser": {
-      "interpolation": true
+      "vue": true
     },
     "linter": {
       "enabled": true

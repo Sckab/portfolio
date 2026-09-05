@@ -1,7 +1,13 @@
 <script lang="ts" setup>
-defineOgImage("BlogPost.takumi", {
-  title: "Home Page",
-  website: "This is the home page",
+const description = "Sckab's personal portfolio and blog";
+
+defineOgImage("Default.takumi", {
+  title: "Sckab's Portfolio",
+  website: description,
+});
+
+useHead({
+  meta: [{ name: "description", content: description }],
 });
 </script>
 

@@ -19,7 +19,12 @@ const link = computed(() => (useRoute().path === "/" ? "" : "/"));
 
         <NuxtLink
           :to="link"
-          class="text-5xl font-bold text-primary select-none outline-none no-underline decoration-2 underline-offset-6 focus-visible:underline"
+          class="text-5xl font-bold select-none outline-none no-underline decoration-2 underline-offset-6 focus-visible:underline transition-colors"
+          :class="{
+            'text-primary': link.length === 0,
+            'text-link-fg hover:text-primary focus-visible:text-primary':
+              link.length !== 0,
+          }"
         >
           <h1>SCKAB</h1>
         </NuxtLink>
