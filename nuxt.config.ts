@@ -2,7 +2,12 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/content', '@nuxt/fonts', '@nuxt/icon'],
+  modules: [
+    '@nuxt/content',
+    '@nuxt/fonts',
+    '@nuxt/icon',
+    'nuxt-og-image',
+  ],
   devtools: {
     enabled: true,
   },
@@ -26,6 +31,7 @@ export default defineNuxtConfig({
       {
         name: 'Inter',
         provider: 'google',
+        global: true,
       },
     ],
   },
@@ -34,5 +40,10 @@ export default defineNuxtConfig({
     head: {
       title: "Sckab's Portfolio",
     },
+  },
+  site: {
+    url: 'https://sckab.is-a.dev',
+
+    name: "Sckab's Portfolio",
   },
 })
