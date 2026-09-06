@@ -7,6 +7,8 @@
   --color-secondary: #181616;
   --color-tertiary: #2a2a2a;
   --color-foreground: #dfdfd6;
+  --color-error: #c34043;
+  --color-status: #658594;
 
   --color-link-fg: #647d59;
 }
