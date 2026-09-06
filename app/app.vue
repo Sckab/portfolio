@@ -2,11 +2,35 @@
 import NavIcon from "~/components/NavIcon.vue";
 import NavLink from "~/components/NavLink.vue";
 import Link from "./components/Link.vue";
-import { ref } from "vue";
+import { onBeforeUnmount, onMounted, ref, watch } from "vue";
 
-const link = computed(() => (useRoute().path === "/" ? "" : "/"));
+const route = useRoute();
 
+const link = computed(() => (route.path === "/" ? "" : "/"));
+
+const menu = ref<HTMLElement | null>(null);
 const isMenuLinkVisible = ref(false);
+
+function handleClickOutside(event: MouseEvent) {
+  if (menu.value && !menu.value.contains(event.target as Node)) {
+    isMenuLinkVisible.value = false;
+  }
+}
+
+watch(
+  () => route.path,
+  () => {
+    isMenuLinkVisible.value = false;
+  },
+);
+
+onMounted(() => {
+  document.addEventListener("click", handleClickOutside);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener("click", handleClickOutside);
+});
 
 useHead({
   bodyAttrs: {
@@ -75,14 +99,21 @@ useHead({
         </div>
       </div>
 
-      <div class="relative flex h-full items-center justify-center sm:hidden">
+      <div
+        ref="menu"
+        class="relative flex h-full items-center justify-center sm:hidden"
+      >
         <button
           class="inline-flex outline-none"
-          aria-label="Menu Link"
+          :aria-label="isMenuLinkVisible ? 'Close menu' : 'Open menu'"
           :aria-expanded="isMenuLinkVisible"
           @click="isMenuLinkVisible = !isMenuLinkVisible"
         >
-          <Icon name="tabler:menu-2" size="50px" class="text-primary" />
+          <Icon
+            :name="isMenuLinkVisible ? 'tabler:x' : 'tabler:menu-2'"
+            size="50px"
+            class="text-primary"
+          />
         </button>
 
         <div
@@ -91,10 +122,10 @@ useHead({
         >
           <ul>
             <li>
-              <Link link="/projects" text="Projects" />
+              <Link link="/projects" text="Projects" class="text-xl" active />
             </li>
             <li>
-              <Link link="/blog" text="Blog" />
+              <Link link="/blog" text="Blog" class="text-xl" active />
             </li>
             <li>
               <hr class="text-primary my-2" />
@@ -104,16 +135,19 @@ useHead({
                 icon="ri:twitter-x-fill"
                 link="https://x.com/Sckab_345"
                 aria_label="X profile"
+                active
               />
               <NavIcon
                 icon="tabler:brand-leetcode"
                 link="https://leetcode.com/u/Sckab"
                 aria_label="LeetCode profile"
+                active
               />
               <NavIcon
                 icon="mdi:github"
                 link="https://github.com/Sckab"
                 aria_label="GitHub profile"
+                active
               />
             </li>
           </ul>
