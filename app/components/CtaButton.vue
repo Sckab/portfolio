@@ -23,11 +23,13 @@ const props = defineProps<{
     {{ text }}
 
     <Icon
-      v-if="isHoveredOrFocused"
-      name="tabler:arrow-badge-right-filled"
+      :name="
+        isHoveredOrFocused
+          ? 'tabler:arrow-badge-right-filled'
+          : 'tabler:arrow-badge-right'
+      "
       size="35px"
     />
-    <Icon v-else name="tabler:arrow-badge-right" size="35px" />
   </NuxtLink>
 </template>
 

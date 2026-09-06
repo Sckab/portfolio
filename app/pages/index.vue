@@ -53,7 +53,7 @@ useHead({
           <HomeIcon language="javascript" tooltip="JavaScript" />
           <HomeIcon language="typescript" tooltip="TypeScript" />
           <HomeIcon language="tailwindcss" tooltip="Tailwind CSS" />
-          <HomeIcon language="astro" tooltip="Astro" />
+          <HomeIcon language="astro" tooltip="Astro" dark />
           <HomeIcon language="nextjs" tooltip="Next.js" />
           <HomeIcon language="react" tooltip="React" />
           <HomeIcon language="nuxt" tooltip="Nuxt" />

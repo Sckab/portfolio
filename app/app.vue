@@ -44,12 +44,13 @@ useHead({
     class="h-24 border-b border-tertiary w-full flex flex-row p-3.5 justify-between"
   >
     <div class="flex justify-center items-center gap-3.5">
-      <NuxtLink :to="link" class="flex h-full">
+      <NuxtLink :to="link" class="h-full">
         <img
           src="/images/avatar.webp"
           alt="Sckab Avatar"
-          class="h-full rounded-full outline-2 outline-primary outline-offset-2"
-      /></NuxtLink>
+          class="h-full aspect-square rounded-full outline-2 outline-primary outline-offset-2"
+        />
+      </NuxtLink>
 
       <NuxtLink
         :to="link"
