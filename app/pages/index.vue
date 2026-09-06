@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-import HomeIcon from "~/components/HomeIcon.vue";
-import Link from "~/components/Link.vue";
-import IconsGroup from "~/components/IconsGroup.vue";
-import CtaButton from "~/components/CtaButton.vue";
-
 const description = "Sckab's personal portfolio and blog";
 
 defineOgImage("Default.takumi", {

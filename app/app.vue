@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import NavIcon from "~/components/NavIcon.vue";
-import NavLink from "~/components/NavLink.vue";
-import Link from "./components/Link.vue";
-import { onBeforeUnmount, onMounted, ref, watch } from "vue";
-
 const route = useRoute();
 
 const link = computed(() => (route.path === "/" ? "" : "/"));
