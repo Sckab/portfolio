@@ -32,9 +32,15 @@ useHead({
           the minimalism of the terminal, but I also like building GUI ones.
         </p>
 
-        <div class="mt-10 flex justify-center gap-3 md:justify-start">
+        <div class="mt-10 flex flex-wrap justify-center gap-3 md:justify-start">
           <CtaButton text="Projects" link="/projects" />
           <CtaButton text="Blog" link="/blog" secondary />
+          <CtaButton
+            text="GitHub Profile"
+            link="https://github.com/Sckab"
+            secondary
+            external
+          />
         </div>
       </div>
 
@@ -84,7 +90,7 @@ useHead({
     </div>
 
     <div
-      class="w-fit mb-14 p-5 rounded-2xl flex items-center justify-center bg-tertiary"
+      class="w-fit p-5 rounded-2xl flex items-center justify-center bg-tertiary xl:mb-14"
     >
       <p class="text-foreground">
         This project is open source ·
