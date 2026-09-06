@@ -2,6 +2,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2024-04-03',
   modules: [
     '@nuxt/content',
     '@nuxt/fonts',
@@ -21,6 +22,38 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+  icon: {
+    clientBundle: {
+      scan: true,
+      icons: [
+        // scan doesn't catch dynamically created icons
+        'devicon:cplusplus',
+        'devicon:python',
+        'devicon:lua',
+        'devicon:html5',
+        'devicon:css',
+        'devicon:javascript',
+        'devicon:typescript',
+        'devicon:tailwindcss',
+        'devicon:astro',
+        'devicon:nextjs',
+        'devicon:react',
+        'devicon:nuxt',
+        'devicon:vuejs',
+        'devicon:nodejs',
+        'devicon:uv',
+        'devicon:cmake',
+        'devicon:git',
+        'devicon:gitlab',
+        'devicon:github',
+        'devicon:githubactions',
+        'devicon:bash',
+        'devicon:markdown',
+        'devicon:archlinux',
+        'devicon:neovim',
+      ],
+    },
+  },
   fonts: {
     defaults: {
       weights: [
@@ -36,7 +69,6 @@ export default defineNuxtConfig({
       },
     ],
   },
-  compatibilityDate: '2024-04-03',
   app: {
     head: {
       title: "Sckab's Portfolio",
