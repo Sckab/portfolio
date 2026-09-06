@@ -1,5 +1,5 @@
 <template>
-  <span role="alert" class="text-error font-bold">
+  <p role="alert" class="text-error font-bold">
     <slot />
-  </span>
+  </p>
 </template>

@@ -94,8 +94,8 @@ useHead({
           external
         />
         ·
-        <RepoStars repo="Sckab/portfolio" />
       </p>
+      <RepoStars repo="Sckab/portfolio" class="ml-1" />
     </div>
   </div>
 </template>
