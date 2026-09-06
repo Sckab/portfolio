@@ -17,7 +17,9 @@ useHead({
 </script>
 
 <template>
-  <div class="w-full h-full columns-2 gap-10 px-40">
+  <div
+    class="gap-10 grid lg:px-10 lg:grid-cols-2 lg:min-h-[calc(100dvh-96px-24px)] xl:px-40"
+  >
     <div class="flex flex-col justify-center h-full">
       <h1 class="text-primary text-6xl font-bold">Hello!</h1>
 
@@ -29,14 +31,14 @@ useHead({
         I usually make TUI/CLI applications, but I also like building GUI ones.
       </p>
 
-      <div class="mt-10 flex gap-3">
+      <div class="mt-10 flex justify-center gap-3 md:justify-start">
         <CtaButton text="Projects" link="/projects" />
         <CtaButton text="Blog" link="/blog" secondary />
       </div>
     </div>
 
-    <div class="flex items-center justify-center h-full">
-      <div class="bg-tertiary p-5 rounded-3xl flex flex-col gap-3 max-w-5/6">
+    <div class="flex items-center justify-center">
+      <div class="bg-tertiary p-5 rounded-3xl flex flex-col gap-3 md:max-w-5/6">
         <h2 class="text-primary text-5xl font-bold">What i use</h2>
 
         <IconsGroup title="Languages">

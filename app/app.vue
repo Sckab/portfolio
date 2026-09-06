@@ -1,36 +1,47 @@
 <script setup lang="ts">
 import NavIcon from "~/components/NavIcon.vue";
 import NavLink from "~/components/NavLink.vue";
+import Link from "./components/Link.vue";
+import { ref } from "vue";
 
 const link = computed(() => (useRoute().path === "/" ? "" : "/"));
+
+const isMenuLinkVisible = ref(false);
+
+useHead({
+  bodyAttrs: {
+    class: "bg-secondary font-default flex flex-col",
+  },
+});
 </script>
 
 <template>
-  <div class="h-dvh w-full bg-secondary font-default flex flex-col">
-    <header
-      class="h-24 border-b border-tertiary w-full flex flex-row p-3.5 justify-between"
-    >
-      <div class="flex justify-center items-center gap-3.5">
+  <header
+    class="h-24 border-b border-tertiary w-full flex flex-row p-3.5 justify-between"
+  >
+    <div class="flex justify-center items-center gap-3.5">
+      <NuxtLink :to="link" class="flex h-full">
         <img
           src="/images/avatar.webp"
           alt="Sckab Avatar"
           class="h-full rounded-full outline-2 outline-primary outline-offset-2"
-        />
+      /></NuxtLink>
 
-        <NuxtLink
-          :to="link"
-          class="text-5xl font-bold select-none outline-none no-underline decoration-2 underline-offset-6 focus-visible:underline transition-colors"
-          :class="{
-            'text-primary': link.length === 0,
-            'text-link-fg hover:text-primary focus-visible:text-primary':
-              link.length !== 0,
-          }"
-        >
-          <h2 class="uppercase">sckab</h2>
-        </NuxtLink>
-      </div>
+      <NuxtLink
+        :to="link"
+        class="text-5xl font-bold hidden select-none outline-none no-underline decoration-2 underline-offset-6 focus-visible:underline transition-colors md:inline"
+        :class="{
+          'text-primary': link.length === 0,
+          'text-link-fg hover:text-primary focus-visible:text-primary':
+            link.length !== 0,
+        }"
+      >
+        <h2 class="uppercase">sckab</h2>
+      </NuxtLink>
+    </div>
 
-      <nav class="flex flex-row gap-3">
+    <nav>
+      <div class="hidden flex-row gap-3 sm:flex">
         <ul class="flex flex-row items-center justify-center gap-3">
           <li>
             <NavLink link="/projects">projects</NavLink>
@@ -62,12 +73,57 @@ const link = computed(() => (useRoute().path === "/" ? "" : "/"));
             aria_label="GitHub profile"
           />
         </div>
-      </nav>
-    </header>
+      </div>
 
-    <main class="w-full flex-1">
-      <NuxtRouteAnnouncer />
-      <NuxtPage />
-    </main>
-  </div>
+      <div class="relative flex h-full items-center justify-center sm:hidden">
+        <button
+          class="inline-flex outline-none"
+          aria-label="Menu Link"
+          :aria-expanded="isMenuLinkVisible"
+          @click="isMenuLinkVisible = !isMenuLinkVisible"
+        >
+          <Icon name="tabler:menu-2" size="50px" class="text-primary" />
+        </button>
+
+        <div
+          v-if="isMenuLinkVisible"
+          class="absolute right-0 top-full flex flex-col gap-3 rounded-xl bg-tertiary p-4"
+        >
+          <ul>
+            <li>
+              <Link link="/projects" text="Projects" />
+            </li>
+            <li>
+              <Link link="/blog" text="Blog" />
+            </li>
+            <li>
+              <hr class="text-primary my-2" />
+            </li>
+            <li class="flex flex-row">
+              <NavIcon
+                icon="ri:twitter-x-fill"
+                link="https://x.com/Sckab_345"
+                aria_label="X profile"
+              />
+              <NavIcon
+                icon="tabler:brand-leetcode"
+                link="https://leetcode.com/u/Sckab"
+                aria_label="LeetCode profile"
+              />
+              <NavIcon
+                icon="mdi:github"
+                link="https://github.com/Sckab"
+                aria_label="GitHub profile"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="w-full flex-1 p-3">
+    <NuxtRouteAnnouncer />
+    <NuxtPage />
+  </main>
 </template>
