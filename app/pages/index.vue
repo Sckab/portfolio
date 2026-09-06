@@ -28,7 +28,8 @@ useHead({
         and co-founder of
         <Link link="https://github.com/SCSDC-co" text="SCSDC" external />. I
         love designing minimal, but useful interfaces with the best UX possible.
-        I usually make TUI/CLI applications, but I also like building GUI ones.
+        I usually make TUI/CLI applications because I really like the minimalism
+        of the terminal, but I also like building GUI ones.
       </p>
 
       <div class="mt-10 flex justify-center gap-3 md:justify-start">
@@ -62,8 +63,8 @@ useHead({
         </IconsGroup>
 
         <IconsGroup title="Tools">
-          <HomeIcon language="uv" tooltip="Uv Python Package Manager" />
           <HomeIcon language="cmake" tooltip="CMake" />
+          <HomeIcon language="uv" tooltip="Uv Python Package Manager" />
           <HomeIcon language="git" tooltip="Git" />
           <HomeIcon language="gitlab" tooltip="GitLab" />
           <HomeIcon language="github" tooltip="GitHub" dark />
