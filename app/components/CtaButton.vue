@@ -12,7 +12,7 @@ const props = defineProps<{
 <template>
   <a
     v-if="external"
-    class="cta_link"
+    class="link"
     target="_blank"
     rel="noopener noreferrer"
     :class="secondary ? 'secondary' : 'primary'"
@@ -35,7 +35,7 @@ const props = defineProps<{
   </a>
   <NuxtLink
     v-else
-    class="cta_link"
+    class="link"
     :class="secondary ? 'secondary' : 'primary'"
     :to="link"
     @mouseenter="isHoveredOrFocused = true"
