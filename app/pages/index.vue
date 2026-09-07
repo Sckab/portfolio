@@ -3,8 +3,6 @@ import Link from "~/components/Link.vue";
 
 const description = "Sckab's personal portfolio and blog";
 
-const repoStargazersReq = getStargazersCount("Sckab/portfolio");
-
 defineOgImage("Default.takumi", {
   title: "Sckab's Portfolio",
   website: description,
@@ -17,7 +15,7 @@ useHead({
 
 <template>
   <div
-    class="lg:min-h-[calc(100dvh-96px-24px)] flex flex-col justify-center items-center gap-1"
+    class="flex flex-col justify-center items-center gap-3 lg:gap-0 lg:min-h-[calc(100dvh-96px-24px)]"
   >
     <div class="flex-1 gap-10 grid lg:px-10 lg:grid-cols-2 xl:px-40">
       <div class="flex flex-col justify-center h-full">
@@ -90,9 +88,9 @@ useHead({
     </div>
 
     <div
-      class="w-fit p-5 rounded-2xl flex items-center justify-center bg-tertiary xl:mb-14"
+      class="w-fit p-5 rounded-3xl flex flex-row items-center justify-center bg-tertiary xl:mb-14"
     >
-      <p class="text-foreground">
+      <span class="text-foreground">
         This project is open source ·
         <Link
           text="GitHub Repo"
@@ -100,8 +98,8 @@ useHead({
           external
         />
         ·
-      </p>
-      <RepoStars repo="Sckab/portfolio" class="ml-1" />
+        <RepoStars repo="Sckab/portfolio" class="ml-1" />
+      </span>
     </div>
   </div>
 </template>

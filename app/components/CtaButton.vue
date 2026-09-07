@@ -56,10 +56,10 @@ const props = defineProps<{
   </NuxtLink>
 </template>
 
-<style>
+<style scoped>
 @reference "../assets/css/main.css";
 
-.cta_link {
+.link {
   @apply flex flex-row items-center text-xl p-2 pl-4 pr-2 rounded-xl font-bold border-2
     border-primary outline-none transition-colors;
 }

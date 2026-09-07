@@ -38,7 +38,7 @@ const {
   </NuxtLink>
 </template>
 
-<style>
+<style scoped>
 @reference "../assets/css/main.css";
 
 .link {
