@@ -41,6 +41,20 @@ const projects: Project[] = [
       { language: "tailwindcss", tooltip: "TailwindCSS" },
     ],
   },
+  {
+    name: "Portfolio",
+    status: "Active",
+    short_description: "My personal developer portfolio (this website).",
+    long_description:
+      "A personal portfolio website built with Nuxt, Vue, TypeScript, and Tailwind CSS, designed to showcase my projects, skills, and experience. The site focuses on accessibility, responsive design, performance, and modern web development practices.",
+    github: "Sckab/portfolio",
+    languages: [
+      { language: "nuxt", tooltip: "Nuxt" },
+      { language: "vuejs", tooltip: "Vue" },
+      { language: "typescript", tooltip: "TypeScript" },
+      { language: "tailwindcss", tooltip: "Tailwind CSS" },
+    ],
+  },
 ];
 </script>
 
