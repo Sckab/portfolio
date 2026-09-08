@@ -74,7 +74,15 @@ useHead({
     <div
       class="w-full flex flex-col items-center justify-center gap-2 xl:w-3/4"
     >
-      <h1 class="uppercase text-3xl text-primary">projects</h1>
+      <div class="flex flex-col items-center">
+        <h1 class="uppercase text-3xl text-primary">projects</h1>
+
+        <p class="text-foreground md:w-3/4 lg:w-1/2">
+          These are some of the major projects I've worked on. They range from
+          TUI applications to static websites, and I believe they represent my
+          current skills as a software and front-end web developer quite well.
+        </p>
+      </div>
 
       <div class="grid gap-3 items-start md:grid-cols-2 lg:grid-cols-3">
         <ProjectsCard
