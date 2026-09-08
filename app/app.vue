@@ -3,29 +3,29 @@ const route = useRoute();
 
 const link = computed(() => (route.path === "/" ? "" : "/"));
 
-const menu = ref<HTMLElement | null>(null);
-const isMenuLinkVisible = ref(false);
+const navbarLinks: { name: string; link: string }[] = [
+  { name: "projects", link: "/projects" },
+  { name: "blog", link: "/blog" },
+  { name: "about", link: "/about" },
+];
 
-function handleClickOutside(event: MouseEvent) {
-  if (menu.value && !menu.value.contains(event.target as Node)) {
-    isMenuLinkVisible.value = false;
-  }
-}
-
-watch(
-  () => route.path,
-  () => {
-    isMenuLinkVisible.value = false;
+const navbarIcons: { icon: string; link: string; aria_label: string }[] = [
+  {
+    icon: "ri:twitter-x-fill",
+    link: "https://x.com/Sckab_345",
+    aria_label: "X profile",
   },
-);
-
-onMounted(() => {
-  document.addEventListener("click", handleClickOutside);
-});
-
-onBeforeUnmount(() => {
-  document.removeEventListener("click", handleClickOutside);
-});
+  {
+    icon: "tabler:brand-leetcode",
+    link: "https://leetcode.com/u/Sckab",
+    aria_label: "LeetCode profile",
+  },
+  {
+    icon: "mdi:github",
+    link: "https://github.com/Sckab",
+    aria_label: "GitHub profile",
+  },
+];
 
 useHead({
   bodyAttrs: {
@@ -61,99 +61,67 @@ useHead({
     </div>
 
     <nav>
-      <div class="hidden flex-row gap-3 sm:flex">
-        <ul class="flex flex-row items-center justify-center gap-3">
-          <li>
-            <NavbarLink link="/projects">projects</NavbarLink>
-          </li>
-          <li>
-            <div class="h-11 bg-tertiary w-0.5"></div>
-          </li>
-          <li>
-            <NavbarLink link="/blog">blog</NavbarLink>
-          </li>
+      <div class="hidden flex-row items-center justify-center gap-3 sm:flex">
+        <ul class="hidden flex-row items-center justify-center gap-3 lg:flex">
+          <template v-for="(item, index) in navbarLinks" :key="item.link">
+            <li>
+              <NavbarLink :link="item.link">
+                {{ item.name }}
+              </NavbarLink>
+            </li>
+
+            <li v-if="index < navbarLinks.length - 1">
+              <div class="h-11 bg-tertiary w-0.5"></div>
+            </li>
+          </template>
         </ul>
+
+        <NavbarDropdown class="sm:flex lg:hidden">
+          <li v-for="link in navbarLinks" :key="link.link">
+            <NavbarLink
+              :link="link.link"
+              :text="link.name"
+              class="text-xl capitalize"
+              active
+            />
+          </li>
+        </NavbarDropdown>
 
         <div
           class="bg-tertiary rounded-3xl h-full w-fit flex flex-row justify-center items-center p-3.5 gap-3"
         >
           <NavbarIcon
-            icon="ri:twitter-x-fill"
-            link="https://x.com/Sckab_345"
-            aria_label="X profile"
-          />
-          <NavbarIcon
-            icon="tabler:brand-leetcode"
-            link="https://leetcode.com/u/Sckab"
-            aria_label="LeetCode profile"
-          />
-          <NavbarIcon
-            icon="mdi:github"
-            link="https://github.com/Sckab"
-            aria_label="GitHub profile"
+            v-for="icon in navbarIcons"
+            :key="icon.icon"
+            :icon="icon.icon"
+            :link="icon.link"
+            :aria_label="icon.aria_label"
           />
         </div>
       </div>
 
-      <div
-        ref="menu"
-        class="relative flex h-full items-center justify-center sm:hidden"
-      >
-        <button
-          class="inline-flex outline-none"
-          :aria-label="isMenuLinkVisible ? 'Close menu' : 'Open menu'"
-          :aria-expanded="isMenuLinkVisible"
-          @click="isMenuLinkVisible = !isMenuLinkVisible"
-        >
-          <Icon
-            :name="isMenuLinkVisible ? 'tabler:x' : 'tabler:menu-2'"
-            size="50px"
-            class="text-primary"
+      <NavbarDropdown class="flex sm:hidden">
+        <li v-for="link in navbarLinks" :key="link.link">
+          <NavbarLink
+            :link="link.link"
+            :text="link.name"
+            class="text-xl capitalize"
+            active
           />
-        </button>
-
-        <div
-          v-if="isMenuLinkVisible"
-          class="absolute right-0 top-full flex flex-col gap-3 rounded-xl bg-tertiary p-4 z-50"
-        >
-          <ul>
-            <li>
-              <NavbarLink
-                link="/projects"
-                text="Projects"
-                class="text-xl"
-                active
-              />
-            </li>
-            <li>
-              <NavbarLink link="/blog" text="Blog" class="text-xl" active />
-            </li>
-            <li>
-              <Divider />
-            </li>
-            <li class="flex flex-row">
-              <NavbarIcon
-                icon="ri:twitter-x-fill"
-                link="https://x.com/Sckab_345"
-                aria_label="X profile"
-                active
-              />
-              <NavbarIcon
-                icon="tabler:brand-leetcode"
-                link="https://leetcode.com/u/Sckab"
-                aria_label="LeetCode profile"
-                active
-              />
-              <NavbarIcon
-                icon="mdi:github"
-                link="https://github.com/Sckab"
-                aria_label="GitHub profile"
-                active
-              />
-            </li>
-          </ul>
-        </div>
-      </div>
+        </li>
+        <li>
+          <Divider />
+        </li>
+        <li class="flex flex-row">
+          <NavbarIcon
+            v-for="icon in navbarIcons"
+            :key="icon.icon"
+            :icon="icon.icon"
+            :link="icon.link"
+            :aria_label="icon.aria_label"
+          />
+        </li>
+      </NavbarDropdown>
     </nav>
   </header>
 

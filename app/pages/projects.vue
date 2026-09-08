@@ -20,7 +20,7 @@ const projects: Project[] = [
   {
     name: "DINFO",
     status: "Archived",
-    short_description: "A tool to get informations of a directory/file.",
+    short_description: "A tool for analyzing files and directories.",
     long_description:
       "A directory analysis tool written in C# that provides detailed insights into files and directories through an interactive terminal interface powered by Spectre.Console. DINFO can analyze directory structures, count files and subdirectories, calculate total size, count lines of code, inspect file types and extensions, and display filesystem information and metadata.",
     github: "SCSDC-co/DINFO",
@@ -57,7 +57,7 @@ const projects: Project[] = [
   },
 ];
 
-const description = "The list of the best projects I've made";
+const description = "A collection of the major projects I've worked on.";
 
 defineOgImage("Default.takumi", {
   title: "Sckab's Portfolio",
