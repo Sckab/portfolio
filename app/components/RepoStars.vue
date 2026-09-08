@@ -13,7 +13,7 @@ const repoStargazersReq = getStargazersCount(repo);
   <Error v-else-if="repoStargazersReq.error.value">
     Failed to load the repo stars
   </Error>
-  <span v-else class="text-foreground">
+  <span v-else class="inline-flex items-center gap-1 text-foreground">
     <Icon name="tabler:star-filled" class="text-yellow-300" />
     {{ repoStargazersReq.data }}
   </span>
