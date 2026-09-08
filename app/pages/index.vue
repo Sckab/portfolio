@@ -24,16 +24,20 @@ useHead({
         <p class="text-foreground text-2xl">
           I'm a 12th grade student and a passionate software/front-end developer
           and co-founder of
-          <Link link="https://github.com/SCSDC-co" text="SCSDC" external />. I
-          love designing minimal, but useful interfaces with the best UX
+          <Link
+            link="https://github.com/SCSDC-co"
+            text="SCSDC"
+            external
+            class="mr-5"
+          />. I love designing minimal, but useful interfaces with the best UX
           possible. I usually make TUI/CLI applications because I really like
           the minimalism of the terminal, but I also like building GUI ones.
         </p>
 
         <div class="mt-10 flex flex-wrap justify-center gap-3 md:justify-start">
-          <CtaButton text="Projects" link="/projects" />
-          <CtaButton text="Blog" link="/blog" secondary />
-          <CtaButton
+          <IndexCtaButton text="Projects" link="/projects" />
+          <IndexCtaButton text="Blog" link="/blog" secondary />
+          <IndexCtaButton
             text="GitHub Profile"
             link="https://github.com/Sckab"
             secondary
@@ -48,41 +52,51 @@ useHead({
         >
           <h2 class="text-primary text-5xl font-bold">What i use</h2>
 
-          <IconsGroup title="Languages">
-            <HomeIcon language="cplusplus" tooltip="C++" />
-            <HomeIcon language="python" tooltip="Python" />
-            <HomeIcon language="lua" tooltip="Lua" />
-          </IconsGroup>
+          <IndexLanguageIconsGroup title="Languages">
+            <LanguageIcon language="cplusplus" tooltip="C++" />
+            <LanguageIcon language="python" tooltip="Python" />
+            <LanguageIcon language="lua" tooltip="Lua" />
+          </IndexLanguageIconsGroup>
 
-          <IconsGroup title="Web">
-            <HomeIcon language="html5" tooltip="HTML" />
-            <HomeIcon language="css" tooltip="CSS" />
-            <HomeIcon language="javascript" tooltip="JavaScript" />
-            <HomeIcon language="typescript" tooltip="TypeScript" />
-            <HomeIcon language="tailwindcss" tooltip="Tailwind CSS" />
-            <HomeIcon language="astro" tooltip="Astro" dark />
-            <HomeIcon language="nextjs" tooltip="Next.js" />
-            <HomeIcon language="react" tooltip="React" />
-            <HomeIcon language="nuxt" tooltip="Nuxt" />
-            <HomeIcon language="vuejs" tooltip="Vue" />
-            <HomeIcon language="nodejs" tooltip="Node.js" />
-          </IconsGroup>
+          <IndexLanguageIconsGroup title="Web">
+            <LanguageIcon language="html5" tooltip="HTML" />
+            <LanguageIcon language="css" tooltip="CSS" />
+            <LanguageIcon language="javascript" tooltip="JavaScript" />
+            <LanguageIcon language="typescript" tooltip="TypeScript" />
+            <LanguageIcon language="tailwindcss" tooltip="Tailwind CSS" />
+            <LanguageIcon language="astro" tooltip="Astro" dark />
+            <LanguageIcon language="nextjs" tooltip="Next.js" />
+            <LanguageIcon language="react" tooltip="React" />
+            <LanguageIcon language="nuxt" tooltip="Nuxt" />
+            <LanguageIcon language="vuejs" tooltip="Vue" />
+            <LanguageIcon language="nodejs" tooltip="Node.js" />
+          </IndexLanguageIconsGroup>
 
-          <IconsGroup title="Tools">
-            <HomeIcon language="cmake" tooltip="CMake" />
-            <HomeIcon language="uv" tooltip="Uv Python Package Manager" />
-            <HomeIcon language="git" tooltip="Git" />
-            <HomeIcon language="gitlab" tooltip="GitLab" />
-            <HomeIcon language="github" tooltip="GitHub" dark />
-            <HomeIcon language="githubactions" tooltip="GitHub Actions" />
-            <HomeIcon language="bash" tooltip="Bash" dark />
-            <HomeIcon language="markdown" tooltip="Markdown" dark />
-          </IconsGroup>
+          <IndexLanguageIconsGroup title="Tools">
+            <LanguageIcon language="cmake" tooltip="CMake" />
+            <LanguageIcon
+              language="file-type-ninja"
+              tooltip="Ninja"
+              family="vscode-icons"
+            />
+            <LanguageIcon
+              language="file-type-conan"
+              tooltip="Conan"
+              family="vscode-icons"
+            />
+            <LanguageIcon language="uv" tooltip="Uv Python Package Manager" />
+            <LanguageIcon language="git" tooltip="Git" />
+            <LanguageIcon language="gitlab" tooltip="GitLab" />
+            <LanguageIcon language="github" tooltip="GitHub" dark />
+            <LanguageIcon language="githubactions" tooltip="GitHub Actions" />
+            <LanguageIcon language="bash" tooltip="Bash" dark />
+            <LanguageIcon language="markdown" tooltip="Markdown" dark />
+          </IndexLanguageIconsGroup>
 
-          <IconsGroup title="Environment">
-            <HomeIcon language="archlinux" tooltip="Arch Linux" />
-            <HomeIcon language="neovim" tooltip="Neovim" />
-          </IconsGroup>
+          <IndexLanguageIconsGroup title="Environment">
+            <LanguageIcon language="archlinux" tooltip="Arch Linux" />
+            <LanguageIcon language="neovim" tooltip="Neovim" />
+          </IndexLanguageIconsGroup>
         </div>
       </div>
     </div>

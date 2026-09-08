@@ -57,7 +57,7 @@ const props = defineProps<{
 </template>
 
 <style scoped>
-@reference "../assets/css/main.css";
+@reference "~/assets/css/main.css";
 
 .link {
   @apply flex flex-row items-center text-xl p-2 pl-4 pr-2 rounded-xl font-bold border-2

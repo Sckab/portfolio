@@ -64,30 +64,30 @@ useHead({
       <div class="hidden flex-row gap-3 sm:flex">
         <ul class="flex flex-row items-center justify-center gap-3">
           <li>
-            <NavLink link="/projects">projects</NavLink>
+            <NavbarLink link="/projects">projects</NavbarLink>
           </li>
           <li>
             <div class="h-11 bg-tertiary w-0.5"></div>
           </li>
           <li>
-            <NavLink link="/blog">blog</NavLink>
+            <NavbarLink link="/blog">blog</NavbarLink>
           </li>
         </ul>
 
         <div
           class="bg-tertiary rounded-3xl h-full w-fit flex flex-row justify-center items-center p-3.5 gap-3"
         >
-          <NavIcon
+          <NavbarIcon
             icon="ri:twitter-x-fill"
             link="https://x.com/Sckab_345"
             aria_label="X profile"
           />
-          <NavIcon
+          <NavbarIcon
             icon="tabler:brand-leetcode"
             link="https://leetcode.com/u/Sckab"
             aria_label="LeetCode profile"
           />
-          <NavIcon
+          <NavbarIcon
             icon="mdi:github"
             link="https://github.com/Sckab"
             aria_label="GitHub profile"
@@ -114,32 +114,37 @@ useHead({
 
         <div
           v-if="isMenuLinkVisible"
-          class="absolute right-0 top-full flex flex-col gap-3 rounded-xl bg-tertiary p-4"
+          class="absolute right-0 top-full flex flex-col gap-3 rounded-xl bg-tertiary p-4 z-50"
         >
           <ul>
             <li>
-              <Link link="/projects" text="Projects" class="text-xl" active />
+              <NavbarLink
+                link="/projects"
+                text="Projects"
+                class="text-xl"
+                active
+              />
             </li>
             <li>
-              <Link link="/blog" text="Blog" class="text-xl" active />
+              <NavbarLink link="/blog" text="Blog" class="text-xl" active />
             </li>
             <li>
-              <hr class="text-primary my-2" />
+              <Divider />
             </li>
             <li class="flex flex-row">
-              <NavIcon
+              <NavbarIcon
                 icon="ri:twitter-x-fill"
                 link="https://x.com/Sckab_345"
                 aria_label="X profile"
                 active
               />
-              <NavIcon
+              <NavbarIcon
                 icon="tabler:brand-leetcode"
                 link="https://leetcode.com/u/Sckab"
                 aria_label="LeetCode profile"
                 active
               />
-              <NavIcon
+              <NavbarIcon
                 icon="mdi:github"
                 link="https://github.com/Sckab"
                 aria_label="GitHub profile"

@@ -16,7 +16,7 @@ const {
   <a
     v-if="external"
     :href="link"
-    class="link inline-flex items-center group"
+    class="link inline-flex items-center group relative mr-3"
     :class="{ 'text-link-fg': !active, 'text-primary': active }"
     target="_blank"
     rel="noopener noreferrer"
@@ -25,7 +25,7 @@ const {
 
     <Icon
       name="tabler:arrow-up-right"
-      class="mb-1 group-focus-visible:mb-2 group-hover:mb-2 transition-all duration-50"
+      class="absolute left-full bottom-1/6 group-focus-visible:bottom-1/4 group-hover:bottom-1/4 transition-all duration-50"
     />
   </a>
   <NuxtLink
@@ -39,7 +39,7 @@ const {
 </template>
 
 <style scoped>
-@reference "../assets/css/main.css";
+@reference "~/assets/css/main.css";
 
 .link {
   @apply font-bold outline-none
