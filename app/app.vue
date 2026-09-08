@@ -38,7 +38,7 @@ useHead({
   <header
     class="h-24 border-b border-tertiary w-full flex flex-row p-3.5 justify-between"
   >
-    <div class="flex justify-center items-center gap-3.5">
+    <div class="flex items-center gap-3.5">
       <NuxtLink :to="link" class="h-full">
         <img
           src="/images/avatar.webp"
