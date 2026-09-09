@@ -20,7 +20,7 @@
     "@nuxtjs/sitemap": "8.5.0",
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/vite": "^4.3.3",
-    "@takumi-rs/core": "^2.13.5",
+    "@takumi-rs/core": "^2.13.6",
     "@unhead/vue": "^3.4.0",
     "better-sqlite3": "^13.0.3",
     "nuxt": "^4.5.2",
