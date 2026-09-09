@@ -1,6 +1,11 @@
 <script lang="ts" setup>
 import type { Project } from "~/composables/types/Project";
 
+usePageMetadata({
+  title: "Projects",
+  description: "A collection of the major projects I've worked on.",
+});
+
 const projects: Project[] = [
   {
     name: "FIMA",
@@ -56,17 +61,6 @@ const projects: Project[] = [
     ],
   },
 ];
-
-const description = "A collection of the major projects I've worked on.";
-
-defineOgImage("Default.takumi", {
-  title: "Sckab's Portfolio",
-  website: description,
-});
-
-useHead({
-  meta: [{ name: "description", content: description }],
-});
 </script>
 
 <template>

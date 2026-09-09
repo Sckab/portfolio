@@ -11,7 +11,7 @@ const props = defineProps<{
       <div class="flex flex-col gap-3">
         <h1 class="text-primary text-6xl">{{ title }}</h1>
 
-        <p class="text-foreground text-3xl">{{ website }}</p>
+        <span class="text-foreground text-3xl">{{ website }}</span>
       </div>
 
       <div>

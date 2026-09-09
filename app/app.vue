@@ -28,6 +28,14 @@ const navbarIcons: { icon: string; link: string; aria_label: string }[] = [
 ];
 
 useHead({
+  titleTemplate: (title) => {
+    if (!title || title === "Sckab's Portfolio") {
+      return "Sckab's Portfolio";
+    }
+
+    return `${title} | Sckab's Portfolio`;
+  },
+
   bodyAttrs: {
     class: "bg-secondary font-default flex flex-col",
   },

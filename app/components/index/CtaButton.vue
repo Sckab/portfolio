@@ -5,36 +5,11 @@ const props = defineProps<{
   text: string;
   link: string;
   secondary?: boolean;
-  external?: boolean;
 }>();
 </script>
 
 <template>
-  <a
-    v-if="external"
-    class="link"
-    target="_blank"
-    rel="noopener noreferrer"
-    :class="secondary ? 'secondary' : 'primary'"
-    :href="link"
-    @mouseenter="isHoveredOrFocused = true"
-    @mouseleave="isHoveredOrFocused = false"
-    @focus="isHoveredOrFocused = true"
-    @blur="isHoveredOrFocused = false"
-  >
-    {{ text }}
-
-    <Icon
-      :name="
-        isHoveredOrFocused
-          ? 'tabler:arrow-badge-right-filled'
-          : 'tabler:arrow-badge-right'
-      "
-      size="35px"
-    />
-  </a>
   <NuxtLink
-    v-else
     class="link"
     :class="secondary ? 'secondary' : 'primary'"
     :to="link"

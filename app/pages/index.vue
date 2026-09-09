@@ -1,15 +1,9 @@
 <script lang="ts" setup>
 import Link from "~/components/Link.vue";
 
-const description = "Sckab's personal portfolio and blog";
-
-defineOgImage("Default.takumi", {
+usePageMetadata({
   title: "Sckab's Portfolio",
-  website: description,
-});
-
-useHead({
-  meta: [{ name: "description", content: description }],
+  description: "Sckab's personal portfolio and blog",
 });
 </script>
 
@@ -37,12 +31,7 @@ useHead({
         <div class="mt-10 flex flex-wrap justify-center gap-3 md:justify-start">
           <IndexCtaButton text="Projects" link="/projects" />
           <IndexCtaButton text="Blog" link="/blog" secondary />
-          <IndexCtaButton
-            text="GitHub Profile"
-            link="https://github.com/Sckab"
-            secondary
-            external
-          />
+          <IndexCtaButton text="About" link="/about" secondary />
         </div>
       </div>
 
