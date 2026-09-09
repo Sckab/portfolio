@@ -1,4 +1,4 @@
-export default function getStargazersCount(repo: string) {
+export default function useStargazersCount(repo: string) {
   return useAsyncData(
     `github-stargazers-${repo}`,
     () =>

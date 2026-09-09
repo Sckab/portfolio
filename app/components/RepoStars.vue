@@ -3,7 +3,7 @@ const { repo } = defineProps<{
   repo: string;
 }>();
 
-const repoStargazersReq = getStargazersCount(repo);
+const repoStargazersReq = useStargazersCount(repo);
 </script>
 
 <template>
