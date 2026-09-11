@@ -24,7 +24,7 @@ are more popular and user-friendly.
 
 For web development I mainly do front-end because I'm not smart enough
 to make the back-end and because I like it more. I've built websites
-using :AppLink{ text="VitePress" link="fima.scsdc-co.org" class="mr-3" external},
+using :AppLink{ text="VitePress" link="fima.scsdc-co.org" external}&nbsp;,
 Astro (the first version of my portfolio and the first rewrite of
 the Create Mastery website), :AppLink{text="Next.js" link="createmastery.org" external}&nbsp;
 and Nuxt (this website).
