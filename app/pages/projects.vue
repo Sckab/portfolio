@@ -14,7 +14,7 @@ const projects: Project[] = [
     long_description:
       "A filesystem toolkit powered by FTXUI, libgit2 and other libraries, written in modern C++23 for exploring, analyzing, and managing files and directories from the command line. FIMA provides tools such as directory listing, file information, line counting, filesystem metadata handling, and more, with a focus on simplicity, performance, and cross-platform support.",
     github: "SCSDC-co/FIMA",
-    website: "https://fima.scsdc-co.org",
+    website: "fima.scsdc-co.org",
     languages: [
       { language: "cplusplus", tooltip: "C++" },
       { language: "cmake", tooltip: "CMake" },

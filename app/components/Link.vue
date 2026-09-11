@@ -15,8 +15,8 @@ const {
 <template>
   <a
     v-if="external"
-    :href="link"
-    class="link inline-flex items-center group relative mr-3"
+    :href="'https://' + link"
+    class="link inline-flex items-center group relative mr-2.5"
     :class="{ 'text-link-fg': !active, 'text-primary': active }"
     target="_blank"
     rel="noopener noreferrer"

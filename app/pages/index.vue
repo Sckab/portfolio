@@ -19,7 +19,7 @@ usePageMetadata({
           I'm a 12th grade student and a passionate software/front-end developer
           and co-founder of
           <Link
-            link="https://github.com/SCSDC-co"
+            link="github.com/SCSDC-co"
             text="SCSDC"
             external
             class="mr-5"
@@ -95,11 +95,7 @@ usePageMetadata({
     >
       <span class="text-foreground">
         This project is open source ·
-        <Link
-          text="GitHub Repo"
-          link="https://github.com/Sckab/portfolio"
-          external
-        />
+        <Link text="GitHub Repo" link="github.com/Sckab/portfolio" external />
         ·
         <RepoStars repo="Sckab/portfolio" />
       </span>

@@ -60,7 +60,8 @@ const props = defineProps<{
       <Link
         v-if="project.github"
         text="GitHub Repo"
-        :link="'https://github.com/' + project.github"
+        :link="'github.com/' + project.github"
+        class="mr-3"
         external
       />
       <div
@@ -71,6 +72,7 @@ const props = defineProps<{
         v-if="project.website"
         text="Website"
         :link="project.website"
+        class="mr-3"
         external
       />
       <div
