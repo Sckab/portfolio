@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@iconify-json/logos": "^1.2.14",
-    "@iconify-json/vscode-icons": "^1.2.77"
+    "@iconify-json/vscode-icons": "^1.2.77",
+    "@tailwindcss/typography": "^0.5.20"
   }
 }

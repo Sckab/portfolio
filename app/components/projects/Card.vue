@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import Link from "~/components/Link.vue";
-
 import type { Project, ProjectStatus } from "~/composables/types/Project";
 
 const projectStatusToBadgeColor = (status: ProjectStatus) => {
@@ -57,7 +55,7 @@ const props = defineProps<{
     <Divider />
 
     <div class="inline-flex items-center justify-center w-full">
-      <Link
+      <AppLink
         v-if="project.github"
         text="GitHub Repo"
         :link="'github.com/' + project.github"
@@ -68,7 +66,7 @@ const props = defineProps<{
         v-if="project.github && project.website"
         class="h-5 w-0.5 bg-tertiary rounded-full mx-1"
       ></div>
-      <Link
+      <AppLink
         v-if="project.website"
         text="Website"
         :link="project.website"

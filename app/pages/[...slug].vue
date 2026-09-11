@@ -20,5 +20,9 @@ usePageMetadata({
 </script>
 
 <template>
-  <ContentRenderer v-if="page" :value="page" />
+  <div class="w-full flex justify-center">
+    <article class="prose prose-portfolio w-full lg:w-2/3 lg:prose-lg xl:w-2/5">
+      <ContentRenderer v-if="page" :value="page" />
+    </article>
+  </div>
 </template>

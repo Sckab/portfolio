@@ -11,6 +11,25 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
   ],
+  content: {
+    build: {
+      markdown: {
+        toc: {
+          depth: 3,
+        },
+        contentHeading: false,
+        highlight: {
+          theme: 'kanagawa-dragon',
+          langs: [
+            'cpp',
+            'bash',
+            'python',
+            'vue',
+          ],
+        },
+      },
+    },
+  },
   devtools: {
     enabled: true,
   },
@@ -68,11 +87,6 @@ export default defineNuxtConfig({
         global: true,
       },
     ],
-  },
-  app: {
-    head: {
-      title: "Sckab's Portfolio",
-    },
   },
   site: {
     url: 'https://sckab.is-a.dev',

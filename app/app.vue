@@ -47,11 +47,11 @@ useHead({
     class="h-24 border-b border-tertiary w-full flex flex-row p-3.5 justify-between"
   >
     <div class="flex items-center gap-3.5">
-      <NuxtLink :to="link" class="h-full">
+      <NuxtLink :to="link" class="h-full group outline-none">
         <img
           src="/images/avatar.webp"
           alt="Sckab Avatar"
-          class="h-full aspect-square rounded-full outline-2 outline-primary outline-offset-2"
+          class="h-full aspect-square rounded-full outline-2 outline-primary outline-offset-2 group-hover:outline-offset-3 group-focus-visible:outline-offset-3 transition-all"
         />
       </NuxtLink>
 

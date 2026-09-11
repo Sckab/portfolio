@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import Link from "~/components/Link.vue";
-
 usePageMetadata({
   title: "Sckab's Portfolio",
   description: "Sckab's personal portfolio and blog",
@@ -18,7 +16,7 @@ usePageMetadata({
         <p class="text-foreground text-2xl">
           I'm a 12th grade student and a passionate software/front-end developer
           and co-founder of
-          <Link
+          <AppLink
             link="github.com/SCSDC-co"
             text="SCSDC"
             external
@@ -95,7 +93,11 @@ usePageMetadata({
     >
       <span class="text-foreground">
         This project is open source ·
-        <Link text="GitHub Repo" link="github.com/Sckab/portfolio" external />
+        <AppLink
+          text="GitHub Repo"
+          link="github.com/Sckab/portfolio"
+          external
+        />
         ·
         <RepoStars repo="Sckab/portfolio" />
       </span>
