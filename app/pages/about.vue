@@ -22,7 +22,7 @@ usePageMetadata({
         My first project that made it into production was the
         <Link text="Create Mastery" link="createmastery.org" external />&nbsp;
         website. If the site doesn't show up it's because the domain needs to be
-        updated.
+        renewed.
         <Divider class="my-2" />
         I mainly do TUI/CLI applications because I love using the terminal. They
         are also pretty easy to make, which means I can focus more on the actual
