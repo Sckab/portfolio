@@ -1,0 +1,25 @@
+@theme {
+  --font-default: 'Inter', sans-serif;
+  --font-code: 'Fira Code', monospace;
+
+  --color-primary: #76946a;
+  --color-primary-bg: #1e261d;
+  --color-secondary: #181616;
+  --color-tertiary: #2a2a2a;
+  --color-foreground: #dfdfd6;
+  --color-muted: #8f9089;
+
+  --color-status: #658594;
+  --color-warning: #dca460;
+  --color-error: #ce6466;
+
+  --color-status-bg: #16161d;
+  --color-warning-bg: #464039;
+  --color-error-bg: #2b171d;
+
+  --color-link-fg: #647d59;
+}
+
+@utility ligatures-none {
+  font-variant-ligatures: none;
+}
