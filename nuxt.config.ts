@@ -29,6 +29,11 @@ export default defineNuxtConfig({
         },
       },
     },
+    renderer: {
+      alias: {
+        code: 'InlineCodeBlock',
+      },
+    },
   },
   devtools: {
     enabled: true,
@@ -84,6 +89,11 @@ export default defineNuxtConfig({
       {
         name: 'Inter',
         provider: 'google',
+        global: true,
+      },
+      {
+        name: 'Fira Code',
+        provider: 'bunny',
         global: true,
       },
     ],

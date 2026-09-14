@@ -24,3 +24,26 @@ because I like it more. I've built websites using :AppLink{ text="VitePress"
 link="fima.scsdc-co.org" external}&nbsp;, Astro (the first version of my portfolio and the first
 rewrite of the Create Mastery website), :AppLink{text="Next.js" link="createmastery.org"
 external}&nbsp; and Nuxt (this website).
+
+## Stack
+
+In the :AppLink{text="homepage" link="/"} I showed the languages I use. Here, I will explain why I
+use them:
+
+### Applications / Systems programming
+
+- `C++`: Fast, I enjoy writing it, and it's widely used
+- `Python`: Easy to write and widely used
+
+### Web Development
+
+The basics `HTML`, `CSS`, `JavaScript` for obvious reasons.
+
+- `TypeScript`: I prefer using types when programming, as it makes the code more readable and
+  maintainable.
+- `Tailwind CSS`: It simplifies the writing of `CSS`.
+- `VitePress`: It's really useful for building documentation websites for applications and I really
+  like the fact that I can write the entire site in mostly markdown.
+- `Nuxt`: It adds a more opinionated style of creating websites using `Vue`, the ecosystem is really
+  cool and it contains a lot of useful stuff.
+- `Next.js`, `React`: I like `React` and there are a lot of jobs involving them.
