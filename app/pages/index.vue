@@ -2,7 +2,7 @@
 usePageMetadata({
   title: "Sckab's Portfolio",
   description: "Sckab's personal portfolio and blog",
-});
+})
 </script>
 
 <template>
@@ -14,16 +14,10 @@ usePageMetadata({
         <h1 class="text-primary text-6xl font-bold">Hello!</h1>
 
         <p class="text-foreground text-2xl">
-          I'm a 12th grade student and a passionate software/front-end developer
-          and co-founder of
-          <AppLink
-            link="github.com/SCSDC-co"
-            text="SCSDC"
-            external
-            class="mr-5"
-          />. I love designing minimal, but useful interfaces with the best UX
-          possible. I usually make TUI/CLI applications because I really like
-          the minimalism of the terminal, but I also like building GUI ones.
+          I'm a 12th grade student and a passionate software/front-end developer and co-founder of
+          <AppLink href="github.com/SCSDC-co">SCSDC</AppLink>. I love designing minimal, but useful
+          interfaces with the best UX possible. I usually make TUI/CLI applications because I really
+          like the minimalism of the terminal, but I also like building GUI ones.
         </p>
 
         <div class="mt-10 flex flex-wrap justify-center gap-3 md:justify-start">
@@ -34,9 +28,7 @@ usePageMetadata({
       </div>
 
       <div class="flex items-center justify-center">
-        <div
-          class="bg-tertiary p-5 rounded-3xl flex flex-col gap-3 md:max-w-5/6"
-        >
+        <div class="bg-tertiary p-5 rounded-3xl flex flex-col gap-3 md:max-w-5/6">
           <h2 class="text-primary text-5xl font-bold">What i use</h2>
 
           <IndexLanguageIconsGroup title="Languages">
@@ -61,16 +53,8 @@ usePageMetadata({
 
           <IndexLanguageIconsGroup title="Tools">
             <LanguageIcon language="cmake" tooltip="CMake" />
-            <LanguageIcon
-              language="file-type-ninja"
-              tooltip="Ninja"
-              family="vscode-icons"
-            />
-            <LanguageIcon
-              language="file-type-conan"
-              tooltip="Conan"
-              family="vscode-icons"
-            />
+            <LanguageIcon language="file-type-ninja" tooltip="Ninja" family="vscode-icons" />
+            <LanguageIcon language="file-type-conan" tooltip="Conan" family="vscode-icons" />
             <LanguageIcon language="uv" tooltip="Uv Python Package Manager" />
             <LanguageIcon language="git" tooltip="Git" />
             <LanguageIcon language="gitlab" tooltip="GitLab" />
@@ -93,11 +77,7 @@ usePageMetadata({
     >
       <span class="text-foreground">
         This project is open source ·
-        <AppLink
-          text="GitHub Repo"
-          link="github.com/Sckab/portfolio"
-          external
-        />
+        <AppLink href="github.com/Sckab/portfolio">GitHub Repo</AppLink>
         ·
         <RepoStars repo="Sckab/portfolio" />
       </span>

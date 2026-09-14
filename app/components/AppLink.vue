@@ -1,27 +1,22 @@
 <script setup lang="ts">
-const {
-  link,
-  text,
-  external = false,
-  active = false,
-} = defineProps<{
-  link: string;
-  text: string;
-  external?: boolean;
-  active?: boolean;
-}>();
+const { href, active = false } = defineProps<{
+  href: string
+  active?: boolean
+}>()
+
+const external: boolean = !href.startsWith('/')
 </script>
 
 <template>
   <a
     v-if="external"
-    :href="'https://' + link"
+    :href="'https://' + href"
     class="link inline-flex items-center group relative mr-2.5"
     :class="{ 'text-link-fg': !active, 'text-primary': active }"
     target="_blank"
     rel="noopener noreferrer"
   >
-    {{ text }}
+    <slot />
 
     <Icon
       name="tabler:arrow-up-right"
@@ -30,12 +25,14 @@ const {
   </a>
   <NuxtLink
     v-else
-    :to="link"
+    :to="href"
     class="link"
     :class="{ 'text-link-fg': !active, 'text-primary': active }"
   >
-    {{ text }}
+    <slot />
   </NuxtLink>
+  <!-- The content is too close to the arrow, it's needed more space -->
+  <span v-if="external" aria-hidden="true">&nbsp;</span>
 </template>
 
 <style scoped>

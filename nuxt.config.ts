@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     renderer: {
       alias: {
         code: 'InlineCodeBlock',
+        a: 'AppLink',
       },
     },
   },

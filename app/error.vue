@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import type { NuxtError } from "#app";
-import Error from "~/components/Error.vue";
+import type { NuxtError } from '#app'
+import Error from '~/components/Error.vue'
 
-const props = defineProps<{ error: NuxtError }>();
+const props = defineProps<{ error: NuxtError }>()
 </script>
 
 <template>
-  <div
-    class="bg-secondary h-dvh flex items-center justify-center flex-col gap-3"
-  >
+  <div class="bg-secondary h-dvh flex items-center justify-center flex-col gap-3">
     <h1 class="text-primary text-9xl font-bold">{{ error.status }}</h1>
     <Error class="text-4xl">{{ error.statusText }}</Error>
-    <AppLink link="/" text="Go back home" class="text-xl" />
+    <AppLink href="/" class="text-xl">Go back home</AppLink>
   </div>
 </template>
