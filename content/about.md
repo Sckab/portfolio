@@ -49,5 +49,5 @@ The basics: `HTML`, `CSS`, `JavaScript` for obvious reasons.
 - `git`: The de-facto standard for version control.
 - `GitHub`: Super popular platform for storing `git` repositories.
 - `GitLab`: Another popular platform for storing `git` repositories.
-- `Bash Scripts`: Super easy to write and it's cross platform (except on Windows).
+- `Bash scripts`: Super easy to write and it's cross-platform (except on Windows).
 - `Markdown`: [really]{.uppercase} easy to write documentation and it's lovely to write in.
