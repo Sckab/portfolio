@@ -30,8 +30,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(magic-string@1.2.3)(magicast@0.5.4)(oxc-parser@0.143.0)(rolldown@1.2.7)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.7)(rollup@4.63.1)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0)))(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@5.9.3))
       '@nuxtjs/robots':
-        specifier: 6.2.0
-        version: 6.2.0(ed7279ef0a7b5553b2b9b0b5a58397a2)
+        specifier: 6.2.2
+        version: 6.2.2(ed7279ef0a7b5553b2b9b0b5a58397a2)
       '@nuxtjs/sitemap':
         specifier: 8.5.0
         version: 8.5.0(ed7279ef0a7b5553b2b9b0b5a58397a2)
@@ -887,8 +887,8 @@ packages:
   '@nuxtjs/mdc@0.23.1':
     resolution: {integrity: sha512-H+e/eO/Uj5Apb3YwFQs3X0e6HsIPYEm++/lEDFGuQCvPxUh89idhsZRnYQ5EQgAMge5uTS2hmSYIH4mX8xj+Hw==}
 
-  '@nuxtjs/robots@6.2.0':
-    resolution: {integrity: sha512-+y8BRDWOkSMofe0ewOlVQm6+VFd4Qh/I8kh9z/++VwfPlDtrU6BDhoobJ18eVDaMkf8gJl12dwKZziK8yU4c/g==}
+  '@nuxtjs/robots@6.2.2':
+    resolution: {integrity: sha512-2o+XTw8vmVMz3xxRVJ5pgTW8eP4qhzpk0Hkeyaj1c4+uRLea+2XkWhIvJhm9I8QijeIsWQqg9XFy4w4BzpmHKA==}
     peerDependencies:
       zod: '>=3'
     peerDependenciesMeta:
@@ -6934,7 +6934,7 @@ snapshots:
       - supports-color
       - unplugin
 
-  '@nuxtjs/robots@6.2.0(ed7279ef0a7b5553b2b9b0b5a58397a2)':
+  '@nuxtjs/robots@6.2.2(ed7279ef0a7b5553b2b9b0b5a58397a2)':
     dependencies:
       '@fingerprintjs/botd': 2.0.0
       '@nuxt/kit': 4.5.2(magic-string@1.2.3)(magicast@0.5.4)(oxc-parser@0.143.0)(rolldown@1.2.7)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.7)(rollup@4.63.1)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0)))
